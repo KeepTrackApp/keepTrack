@@ -8,7 +8,7 @@
  * Controller of the san
  */
 
-angular.module('san').controller('LoginCtrl' , ['$state','$scope', function($state,$scope){
+angular.module('san.login',[]).controller('LoginCtrl' , ['$state','$scope', function($state,$scope){
   $scope.userName = '';
   $scope.password = '';
   $scope.signIn = function()
