@@ -16,7 +16,7 @@ angular.module('san.login',[]).controller('LoginCtrl' , ['$state','$scope', func
     if($scope.userName === "santosh" && $scope.password === "santosh045")
     {
 
-       $state.go("main");
+       $state.go("main.home");
     }
   };
 }]);

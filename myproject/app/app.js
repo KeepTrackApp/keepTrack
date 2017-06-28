@@ -10,6 +10,7 @@
  */
 angular
   .module('san', [
+    'ui.router',
     'san.route',
     'san.login',
     'ngAnimate',
@@ -17,6 +18,5 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch',
-    'ui.router'
+    'ngTouch'
   ]);

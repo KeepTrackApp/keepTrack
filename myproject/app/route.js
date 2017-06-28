@@ -8,9 +8,21 @@
  *
  * Main module of the application.
  */
-angular.module('san.route', ['ui.router'])
+angular.module('san.route', [])
 .config(['$stateProvider',function($stateProvider) {
-     $stateProvider.state('main', {
+  function initMainStateView() {
+                var viewObj = {
+                    'header': {
+                      templateUrl : 'views/header.html'
+                    }
+                };
+                return viewObj;
+  }
+  $stateProvider.state('main', {
+     url : '/home-view',
+     views: initMainStateView()
+     }
+).state('main.home', {
      url : '/main',
      views :
      {
@@ -20,17 +32,18 @@ angular.module('san.route', ['ui.router'])
         controllerAs: 'main'
        }
      }
-}).state('login', {
+}).state('main.login', {
     url : '/',
     views :
     {
       'content@':
       {
         templateUrl : 'login/login.html',
-      }
+      },
+      'header@' : {}
     }
 });
 }]).run(['$state' ,function($state){
-     $state.go('login');
-   }
+     $state.go('main.login');
+     }
    ]);
