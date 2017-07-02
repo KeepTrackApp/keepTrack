@@ -27,8 +27,8 @@ angular.module('san.route', [])
      views :
      {
        'content@' : {
-         templateUrl : 'views/main.html',
-        controller: 'MainCtrl',
+         templateUrl : 'home/main.html',
+        controller: 'HomeCtrl',
         controllerAs: 'main'
        }
      }
@@ -39,8 +39,7 @@ angular.module('san.route', [])
       'content@':
       {
         templateUrl : 'login/login.html',
-      },
-      'header@' : {}
+      }
     }
 });
 }]).run(['$state' ,function($state){

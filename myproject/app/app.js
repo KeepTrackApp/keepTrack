@@ -11,8 +11,10 @@
 angular
   .module('san', [
     'ui.router',
+    'ui.bootstrap',
     'san.route',
     'san.login',
+    'san.home',
     'ngAnimate',
     'ngCookies',
     'ngResource',

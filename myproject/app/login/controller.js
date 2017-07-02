@@ -8,14 +8,15 @@
  * Controller of the san
  */
 
-angular.module('san.login',[]).controller('LoginCtrl' , ['$state','$scope', function($state,$scope){
-  $scope.userName = '';
-  $scope.password = '';
+angular.module('san.login',[]).controller('LoginCtrl' , ['$state','$scope','$rootScope', function($state,$scope, $rootScope){
+  $scope.userName = 'santosh';
+  $scope.password = 'santosh045';
   $scope.signIn = function()
   {
     if($scope.userName === "santosh" && $scope.password === "santosh045")
     {
-
+       $rootScope.userName = $scope.userName;
+       $rootScope.password = $scope.password;
        $state.go("main.home");
     }
   };
